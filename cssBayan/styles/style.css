@@ -34,7 +34,7 @@ p {
 }
 
 .bayan {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   color: rgb(34, 162, 230);
 }
@@ -55,10 +55,22 @@ p {
   cursor: pointer;
 }
 
+.item__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item__text .fa {
+  color: black;
+  visibility: hidden;
+}
+
 .item__title {
   font-size: 2rem;
   padding: 10px 15px;
   cursor: pointer;
+  flex-basis: 50%;
 }
 
 .item__input {
@@ -73,6 +85,7 @@ p {
   visibility: hidden;
   width: 0;
   height: 0;
+  flex-basis: 100%;
   overflow: hidden;
   font-size: 1.4rem;
   padding: 10px 15px;
@@ -92,6 +105,16 @@ img {
   height: 40rem;
 }
 
-.item__input:checked+.item__title {
+.item__input:checked+.item__text {
   color: #000000;
+}
+
+.item__input:hover~.item__text .fa,
+.item__input:checked~.item__text .fa {
+  transition: transform 0.3s;
+  transform: rotate(-45deg);
+}
+
+.bayan:hover .item__text .fa {
+  visibility: visible;
 }
