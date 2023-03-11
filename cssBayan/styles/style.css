@@ -23,9 +23,15 @@ body {
   font-weight: normal;
   font-style: normal;
   font-size: 1.6rem;
+  transition: 0.3s;
 }
 
-.container {
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.bayan {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -33,4 +39,37 @@ body {
 .title {
   font-size: 3rem;
   text-align: center;
+}
+
+.item {
+  border-bottom: 1px solid gray;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.item__title {
+  display: block;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.item__input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.item__img {
+  display: none;
+  font-size: 1.4rem;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.item__input:checked+.item__img {
+  display: block;
 }
